@@ -27,7 +27,7 @@ const initialState: NewsState = {
   page: 0,
 };
 
-const apiKey = 'tJRbLzARCWUNRimfce1DBOTKOLFu9VpW'
+const apiKey = process.env.API_KEY
 
 export const fetchNews = createAsyncThunk(
   'news/fetchNews',
