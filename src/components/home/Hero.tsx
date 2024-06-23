@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
     return (
         <div className=''>
             <article className="max-md:relative md:gap-12 max-md:h-[80vh] max-md:isolate flex max-md:flex-col max-md:justify-end overflow-hidden md:grid md:grid-cols-2 max-md:pb-6 max-md:pt-40 w-full mx-auto">
-                <img src={articles[0]?.imageUrl} alt={articles[0]?.title} className="max-md:absolute max-md:inset-0 max-md:h-full max-h-96 max-md:w-full lg:w-full object-cover" />
+                <img src={articles[0]?.imageUrl} alt={articles[0]?.title} className="max-md:absolute max-md:inset-0 max-md:h-full md:h-96 max-md:w-full lg:w-full object-cover" />
                 <div className="absolute md:hidden inset-0 bg-gradient-to-t from-gray-900 via-gray-900/30"></div>
                 <div className="max-md:z-10 md:text-[#2A2A2A] max-md:mt-3 md:flex md:items-center px-1 max-md:text-white">
                     <div>
