@@ -47,28 +47,28 @@ const NewsCard: React.FC = () => {
     return (
         <>
             <div className='grid md:grid-cols-3 gap-6 my-4 mx-2 text-dark'>
-                {articles.slice(1).map((article, i) => (
+                {articles?.slice(1).map((article, i) => (
                     <div key={i} className="flex flex-col bg-white shadow-lg rounded-sm">
                         <div onClick={() => setSelectedArticle(article)}>
-                            <img className='cursor-pointer w-full object-cover h-60' src={article.imageUrl || `https://placehold.co/4000x4000?text=${article.title}`} alt={article.title} />
+                            <img className='cursor-pointer w-full object-cover h-60' src={article?.imageUrl || `https://placehold.co/4000x4000?text=${article?.title}`} alt={article?.title} />
                         </div>
                         <div className='p-2 md:px-6 my-3 flex flex-col justify-between flex-1'>
                             <div>
-                                <p onClick={() => setSelectedArticle(article)} className='font-bold font-serif hover:text-danger cursor-pointer'>{article.title}</p>
-                                <p className='text-[13px] my-3 md:h-32'>{article.description}</p>
+                                <p onClick={() => setSelectedArticle(article)} className='font-bold font-serif hover:text-danger cursor-pointer'>{article?.title}</p>
+                                <p className='text-[13px] my-3 md:h-32'>{article?.description}</p>
                             </div>
                             <div className='flex gap-10 text-xs'>
-                                <p>{formatDistanceToNow(new Date(article.publishedAt))} ago</p>
-                                <p className='text-secondary'><span className='px-1'>{article.author} </span><span className='border-s-[1px] border-dark ps-2'>4min read</span></p>
+                                <p>{formatDistanceToNow(new Date(article?.publishedAt))} ago</p>
+                                <p className='text-secondary'><span className='px-1'>{article?.author} </span><span className='border-s-[1px] border-dark ps-2'>4min read</span></p>
                             </div>
                         </div>
                         <div className='border-t border-dark/20 py-2'>
                             <div className='flex justify-center gap-8'>
                                 <p className='cursor-pointer flex items-center'>
-                                    <IoIosHeartEmpty /><span className='text-xs ms-1'>{article.likes}</span>
+                                    <IoIosHeartEmpty /><span className='text-xs ms-1'>{article?.likes}</span>
                                 </p>
                                 <p className='cursor-pointer flex items-center'>
-                                    <IoShareOutline /> <span className='text-xs ms-1'>{article.shares}</span>
+                                    <IoShareOutline /> <span className='text-xs ms-1'>{article?.shares}</span>
                                 </p>
                                 <p className='cursor-pointer flex items-center'>
                                     <CiBookmark />
