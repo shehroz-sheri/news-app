@@ -13,15 +13,15 @@ const Categories: React.FC = () => {
                     {
                         path !== '/search'
                             ? <>
-                                <p className='cursor-pointer hover:text-[#C31815] font-semibold'><span className='border-b-2 border-[#C31815]'>Latest</span> Stories</p>
+                                <p className='cursor-pointer hover:text-danger font-semibold'><span className='border-b-2 border-danger'>Latest</span> Stories</p>
                             </>
-                            : <p className='cursor-pointer hover:text-[#C31815] font-semibold'><span className='border-b-2 border-[#C31815]'>Search</span> Results</p>
+                            : <p className='cursor-pointer hover:text-danger font-semibold'><span className='border-b-2 border-danger'>Search</span> Results</p>
                     }
                     {
                         path !== '/search'
                             ? <>
-                                <p className='cursor-pointer hover:text-[#C31815] font-semibold'>Opinion</p>
-                                <p className='cursor-pointer hover:text-[#C31815] font-semibold'>Health</p>
+                                <p className='cursor-pointer hover:text-danger font-semibold'>Opinion</p>
+                                <p className='cursor-pointer hover:text-danger font-semibold'>Health</p>
                             </>
                             : ''
                     }

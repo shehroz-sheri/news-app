@@ -46,23 +46,23 @@ const NewsCard: React.FC = () => {
 
     return (
         <>
-            <div className='grid md:grid-cols-3 gap-6 my-4 mx-2 text-[#2A2A2A]'>
+            <div className='grid md:grid-cols-3 gap-6 my-4 mx-2 text-dark'>
                 {articles.slice(1).map((article, i) => (
                     <div key={i} className="flex flex-col bg-white shadow-lg rounded-sm">
                         <div onClick={() => setSelectedArticle(article)}>
-                            <img className='cursor-pointer w-full object-cover h-60' src={article.imageUrl} alt={article.title} />
+                            <img className='cursor-pointer w-full object-cover h-60' src={article.imageUrl || `https://placehold.co/4000x4000?text=${article.title}`} alt={article.title} />
                         </div>
                         <div className='p-2 md:px-6 my-3 flex flex-col justify-between flex-1'>
                             <div>
-                                <p onClick={() => setSelectedArticle(article)} className='font-bold font-serif hover:text-[#C31815] cursor-pointer'>{article.title}</p>
+                                <p onClick={() => setSelectedArticle(article)} className='font-bold font-serif hover:text-danger cursor-pointer'>{article.title}</p>
                                 <p className='text-[13px] my-3 md:h-32'>{article.description}</p>
                             </div>
                             <div className='flex gap-10 text-xs'>
                                 <p>{formatDistanceToNow(new Date(article.publishedAt))} ago</p>
-                                <p className='text-[#666666]'><span className='px-1'>{article.author} </span><span className='border-s-[1px] border-[#2A2A2A] ps-2'>4min read</span></p>
+                                <p className='text-secondary'><span className='px-1'>{article.author} </span><span className='border-s-[1px] border-dark ps-2'>4min read</span></p>
                             </div>
                         </div>
-                        <div className='border-t border-[#2A2A2A]/20 py-2'>
+                        <div className='border-t border-dark/20 py-2'>
                             <div className='flex justify-center gap-8'>
                                 <p className='cursor-pointer flex items-center'>
                                     <IoIosHeartEmpty /><span className='text-xs ms-1'>{article.likes}</span>
@@ -85,7 +85,7 @@ const NewsCard: React.FC = () => {
                 <div className="w-10 h-10 border-t-2 border-r-2 border-b-2 border-l-2 border-blue-500 animate-spin"></div>
             </div>}
             <div className="flex justify-center mt-5 pb-3">
-                <button onClick={loadMoreArticles} className='uppercase mx-auto px-10 py-2 text-[15px] font-medium text-[#C31815] border rounded-sm text-center border-[#C31815] hover:bg-[#C31815] hover:text-white hover:border-white'>VIEW MORE</button>
+                <button onClick={loadMoreArticles} className='uppercase mx-auto px-10 py-2 text-[15px] font-medium text-danger border rounded-sm text-center border-danger hover:bg-danger hover:text-white hover:border-white'>LOAD MORE</button>
             </div>
         </>
     )

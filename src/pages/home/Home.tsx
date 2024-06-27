@@ -7,7 +7,7 @@ import { EditorsPick } from '../../components/home/EditorsPick'
 
 const Home: React.FC = () => {
     return (
-        <div className='bg-[#F1F2F3] md:pt-5'>
+        <div className='bg-dimSecondary md:pt-5'>
             <div className='sm:w-[95%] 2xl:w-[80%] mx-auto'>
                 <Hero />
                 <Categories />

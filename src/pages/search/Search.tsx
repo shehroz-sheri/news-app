@@ -7,7 +7,7 @@ import NewsCard from '../../components/home/NewsCard'
 export const Search: React.FC = () => {
     return (
         <>
-            <div className='bg-[#F1F2F3]'>
+            <div className='bg-dimSecondary'>
                 <div className='sm:w-[95%] 2xl:w-[80%] mx-auto'>
                     <SearchSection />
                     <Categories />

@@ -83,13 +83,13 @@ export const NewsArticle: React.FC<ArticleModalProps> = ({ article, onClose }) =
             >
                 <article className='grid sm:grid-cols-2 sm:gap-10 pb-2'>
                     <div className="">
-                        <img src={article.imageUrl} alt={article.title} className="max-md:h-full max-md:w-full object-cover" />
+                        <img src={article.imageUrl || `https://placehold.co/4000x4000?text=${article.title}`} alt={article.title} className="max-h-60 md:max-h-96 w-full object-cover" />
                     </div>
                     <div className="grid items-center">
-                        <div className="sm:text-[#2A2A2A] max-sm:mt-3 sm:flex sm:items-center px-1">
+                        <div className="sm:text-dark max-sm:mt-3 sm:flex sm:items-center px-1">
                             <div>
                                 <div className="flex justify-between my-1 sm:my-3">
-                                    <p className='text-[#C31815] text-md font-bold'>Trending</p>
+                                    <p className='text-danger text-md font-bold'>Trending</p>
                                     <div className='flex justify-center gap-4 max-sm:hidden'>
                                         <p className='cursor-pointer flex items-center'>
                                             {!isLiked ? <IoIosHeartEmpty onClick={() => setIsLiked(true)} /> : <IoIosHeart onClick={() => setIsLiked(false)} color='red' />}
@@ -102,12 +102,12 @@ export const NewsArticle: React.FC<ArticleModalProps> = ({ article, onClose }) =
                                         </p>
                                     </div>
                                 </div>
-                                <Link to={article.url} target='_blank' className='font-serif font-medium sm:font-semibold text-xl sm:text-2xl sm:text-[#2A2A2A] sm:hover:text-[#C31815]'>{article.title}</Link>
+                                <Link to={article.url} target='_blank' className='font-serif font-medium sm:font-semibold text-xl sm:text-2xl sm:text-dark sm:hover:text-danger'>{article.title}</Link>
                                 <div className=''>
-                                    <p className="text-[#2A2A2A]/80 w-[90%] gap-y-1 overflow-hidden leading-5 text-sm my-4">{article.fullDescription}</p>
+                                    <p className="text-dark/80 w-[90%] gap-y-1 overflow-hidden leading-5 text-sm my-4">{article.fullDescription}</p>
                                     <div className='flex sm:gap-10 max-sm:flex-col max-sm:gap-1 max-sm:items-center text-xs'>
                                         <p>{formatDistanceToNow(new Date(article.publishedAt))} ago</p>
-                                        <p className='text-[#666666]/80 max-sm:text-[10.5px]'>{article.author} &nbsp; | &nbsp; 4min read</p>
+                                        <p className='text-secondary/80 max-sm:text-[10.5px]'>{article.author} &nbsp; | &nbsp; 4min read</p>
                                     </div>
                                 </div>
                             </div>

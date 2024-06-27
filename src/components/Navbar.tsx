@@ -8,9 +8,9 @@ export const Navbar: React.FC = () => {
 
     return (
         <>
-            <div className='bg-[#ffffffd9] sticky top-0 z-10 shadow-md'>
+            <div className='bg-light sticky top-0 z-10 shadow-md'>
                 <div className="container sm:w-[95%] 2xl:w-full mx-auto">
-                    <nav className="bg-[#ffffffd9]">
+                    <nav className="bg-light">
                         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                             <div className="relative flex items-center justify-between h-14">
                                 <div className="flex items-center w-full">
@@ -20,7 +20,7 @@ export const Navbar: React.FC = () => {
                                         </Link>
                                     </div>
                                     <div className="hidden lg:block lg:mx-auto">
-                                        <div className="flex space-x-4 text-[#2A2A2A]">
+                                        <div className="flex space-x-4 text-dark">
                                             <Link to={'#'} className="hover:bg-gray-300 px-3 py-2 rounded-md text-sm font-medium"><img className='inline me-[6px] w-2' src={require('../assets/images/Checkbox.png')} alt="" />Corona Updates</Link>
                                             {
                                                 navLinks.map((link, i) => (
