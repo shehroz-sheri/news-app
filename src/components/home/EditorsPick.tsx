@@ -32,7 +32,7 @@ export const EditorsPick: React.FC = () => {
 
             <div className='md:flex md:gap-4'>
               <div className='flex items-center'>
-                <img className='w-full max-h-60 max-md:mb-1 md:max-h-80 object-cover' src={articles[0]?.imageUrl || `https://placehold.co/4000x2800?text=${articles[0].title}`} alt={articles[0]?.title} />
+                <img className='w-full max-h-60 max-md:mb-1 md:max-h-80 object-cover' src={articles[0]?.imageUrl || `https://placehold.co/4000x2800?text=${articles[0]?.title}`} alt={articles[0]?.title} />
               </div>
               <div className='text-dark flex flex-col justify-evenly'>
                 <Link to={articles[0]?.url} target='_blank' className='font-semibold font-serif lg:leading-tight hover:text-danger'>{articles[0]?.title}</Link>
@@ -42,7 +42,7 @@ export const EditorsPick: React.FC = () => {
 
             <div className='md:flex md:gap-4'>
               <div className='flex items-center'>
-                <img className='w-full object-cover' src={articles[1]?.imageUrl || `https://placehold.co/4000x2800?text=${articles[1].title}`} alt={articles[1]?.title} />
+                <img className='w-full object-cover' src={articles[1]?.imageUrl || `https://placehold.co/4000x2800?text=${articles[1]?.title}`} alt={articles[1]?.title} />
               </div>
               <div className='text-dark flex flex-col justify-evenly'>
                 <Link to={articles[1]?.url} target='_blank' className='font-semibold font-serif lg:leading-tight hover:text-danger'>{articles[1]?.title}</Link>
